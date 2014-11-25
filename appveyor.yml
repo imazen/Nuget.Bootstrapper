@@ -1,0 +1,8 @@
+platform:
+  - AnyCPU
+
+configuration:
+  - Release
+
+artifacts:
+  - path: '**\*.exe'
