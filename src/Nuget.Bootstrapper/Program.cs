@@ -25,9 +25,9 @@ namespace Bootstrapper
                     var document = GetConfigDocument();
                     EnsurePackageRestoreConsent(document);
                     ProxyCache.Instance = new ProxyCache(document);
-                    if (!Directory.Exists(exePath))
+                    if (!Directory.Exists(Path.GetDirectoryName(exePath)))
                     {
-                        Directory.CreateDirectory(exePath);
+                        Directory.CreateDirectory(Path.GetDirectoryName(exePath));
                     }
 
                     DownloadExe(exePath);
